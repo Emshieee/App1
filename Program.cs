@@ -59,5 +59,28 @@ namespace App1
             return count;
         }
 
+           //flames results
+        static string GetFlamesResult(int count)
+        {
+            string[] flames = { "Friends", "Lovers", "Affection", "Marriage", "Enemies", "Soulmates" };
+            int index = 0;
+
+            while (flames.Length > 1)
+            {
+                index = (index + count - 1) % flames.Length;
+                flames = RemoveAt(flames, index);
+            }
+
+            return flames[0];
+        }
+
+        //remove element from array 
+        static string[] RemoveAt(string[] array, int index)
+        {
+            var list = new List<string>(array);
+            list.RemoveAt(index);
+            return list.ToArray();
+        }
+
     }
 }
