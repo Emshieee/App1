@@ -46,7 +46,6 @@ namespace App1
                 if (index != -1)
                 {
                     name1Chars[i] = '*'; // mark as removed
-                    name2Chars[index] = '*';
                 }
             }
 
